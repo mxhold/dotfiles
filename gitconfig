@@ -1,0 +1,9 @@
+[core]
+	editor = /usr/local/bin/vim
+[user]
+  name = Max Holder
+  email = mxhold@gmail.com
+[alias]
+  st = status
+  ds = diff --cached
+  co = checkout

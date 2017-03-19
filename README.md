@@ -1,3 +1,4 @@
 # dotfiles
 
-This repository contains my personal dotfiles.
+These should work on macOS Sierra (10.12).
+

@@ -23,9 +23,9 @@ unsetopt cdable_vars
 # History file
 HISTFILE=~/.zhistory
 # Number of lines to read from history file
-HISTSIZE=10000
+HISTSIZE=4096
 # Number of lines to save to history file
-SAVEHIST=10000
+SAVEHIST=4096
 # Share history across all sessions immediately
 setopt inc_append_history
 
@@ -33,4 +33,10 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
 
+#export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh"
+#
+export PATH=/Library/TeX/texbin:$PATH
+export MANPATH=/Library/TeX/Distributions/.DefaultTeX/Contents/Man:$MANPATH

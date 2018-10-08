@@ -11,8 +11,8 @@ set number
 " Enable colors
 set t_Co=256
 
-" Show status line even when only one window is open
-set ls=2
+" Show statusline (filename at bottom) always (not just when two files open)
+set laststatus=2
 
 " === Vundle ===
 filetype off
@@ -22,6 +22,11 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'scrooloose/nerdtree'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
 
 call vundle#end()
 filetype plugin indent on
@@ -31,6 +36,7 @@ filetype plugin indent on
 syntax on
 
 " let g:syntastic_rust_checkers = ['rustc']
+let g:syntastic_javascript_checkers = ['eslint']
 
 " Allow backspace to go over boundaries
 set backspace=indent,eol,start
@@ -56,3 +62,7 @@ if isdirectory($HOME . '/.vim/undo') == 0
   :silent !mkdir -p ~/.vim/undo
 endif
 set undodir=~/.vim/undo//
+
+" Open NERDTree
+nnoremap \nf :NERDTreeFind<CR>
+nnoremap \nt :NERDTree<CR>

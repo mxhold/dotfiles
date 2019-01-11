@@ -17,6 +17,9 @@ set laststatus=2
 " === Vundle ===
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
+" Fuzzy-find
+set rtp+=/usr/local/opt/fzf
+nnoremap \ff :FZF<CR>
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -27,6 +30,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-endwise'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on

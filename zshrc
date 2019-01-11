@@ -33,10 +33,16 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/11/bin:$PATH"
 
-#export NVM_DIR="$HOME/.nvm"
-#. "/usr/local/opt/nvm/nvm.sh"
-#
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 export PATH=/Library/TeX/texbin:$PATH
 export MANPATH=/Library/TeX/Distributions/.DefaultTeX/Contents/Man:$MANPATH
+
+# Use git ls-tree for fast traversal with FZF
+export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+       find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
+        sed s/^..//) 2> /dev/null'

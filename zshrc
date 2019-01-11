@@ -40,9 +40,3 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=/Library/TeX/texbin:$PATH
 export MANPATH=/Library/TeX/Distributions/.DefaultTeX/Contents/Man:$MANPATH
-
-# Use git ls-tree for fast traversal with FZF
-export FZF_DEFAULT_COMMAND='
-  (git ls-tree -r --name-only HEAD ||
-       find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
-        sed s/^..//) 2> /dev/null'

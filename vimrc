@@ -14,12 +14,14 @@ set t_Co=256
 " Show statusline (filename at bottom) always (not just when two files open)
 set laststatus=2
 
+" Fuzzy-find
+set rtp+=/usr/local/opt/fzf
+let $FZF_DEFAULT_COMMAND = 'rg --files'
+nnoremap \ff :FZF<CR>
+
 " === Vundle ===
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-" Fuzzy-find
-set rtp+=/usr/local/opt/fzf
-nnoremap \ff :FZF<CR>
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'

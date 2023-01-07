@@ -24,7 +24,7 @@ link_file() {
   ln -sfv "$1" "$2"
 }
 
-for file in vimrc zshrc tmux.conf gitconfig
+for file in zshrc git-prompt.sh gitconfig
 do
-  link_file "/Users/max/.dotfiles/$file" "/Users/max/.$file"
+  link_file "/Users/max/Projects/dotfiles/$file" "/Users/max/.$file"
 done

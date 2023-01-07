@@ -1,4 +1,3 @@
 # dotfiles
 
-These should work on macOS Sierra (10.12).
-
+These should work on macOS Ventura (13.1).
